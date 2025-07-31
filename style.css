@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #CFE3E2;
+  background-color: #c16a5a;
   color: white;
   padding: 10px 16px;
   border-radius: 24px;
@@ -28,7 +28,7 @@
 .chat-container.hidden { display: none; }
 
 .chat-header {
-  background-color: #CFE3E2;
+  background-color: #c16a5a;
   color: white;
   padding: 10px;
   display: flex;
@@ -120,7 +120,7 @@
 
 .upload-icon {
   font-size: 24px;
-  color: #CFE3E2;
+  color: #c15a5a;
   margin-right: 8px;
   cursor: pointer;
 }
@@ -134,7 +134,7 @@
 }
 
 #send-button {
-  background-color: #CFE3E2;
+  background-color: #c15a5a;
   color: white;
   border: none;
   border-radius: 20px;
