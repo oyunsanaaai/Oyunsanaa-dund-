@@ -1,3 +1,11 @@
+/* Ерөнхий тохиргоо */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+}
+
+/* Ярилцъя товч */
 .chat-toggle {
   position: fixed;
   bottom: 20px;
@@ -11,6 +19,7 @@
   z-index: 10000;
 }
 
+/* Чат контейнер */
 .chat-container {
   position: fixed;
   bottom: 80px;
@@ -25,8 +34,11 @@
   z-index: 9999;
 }
 
-.chat-container.hidden { display: none; }
+.chat-container.hidden {
+  display: none;
+}
 
+/* Толгой хэсэг */
 .chat-header {
   background-color: #c16a5a;
   color: white;
@@ -45,65 +57,54 @@
   margin-right: 8px;
 }
 
+.chat-title {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .chat-controls span {
   margin-left: 10px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.menu-icon {
-  font-size: 20px;
+/* Сэтгэлийн хөтөч цэс */
+.guide-container {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 20px auto;
+  font-family: sans-serif;
 }
 
-.sidebar {
-  background-color: #f9f9f9;
-  padding: 10px;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
+.guide-container h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
 }
 
-.sidebar.hidden {
-  display: none;
-}
-
-.sidebar ul {
+.guide-container ul {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
-.sidebar li {
-  padding: 8px 12px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
+.guide-container li {
+  margin: 10px 0;
 }
 
-.has-submenu {
-  position: relative;
+.guide-container a {
+  text-decoration: none;
+  color: #A28776;
+  font-weight: bold;
 }
 
-.submenu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding-left: 0;
-  width: max-content;
-  z-index: 999;
+.guide-container a:hover {
+  text-decoration: underline;
 }
 
-.submenu.hidden {
-  display: none;
-}
-
-.submenu li {
-  white-space: nowrap;
-  padding: 6px 12px;
-  border-bottom: 1px solid #eee;
-}
-
-
+/* Чат харилцаа */
 .chatbox {
   flex: 1;
   padding: 10px;
@@ -111,18 +112,12 @@
   background-color: #fff;
 }
 
-.chat-input {
+/* Бичих хэсэг */
+.chat-input-container {
   display: flex;
   align-items: center;
   padding: 10px;
   border-top: 1px solid #ccc;
-}
-
-.upload-icon {
-  font-size: 24px;
-  color: #c15a5a;
-  margin-right: 8px;
-  cursor: pointer;
 }
 
 #userInput {
@@ -131,6 +126,7 @@
   border-radius: 20px;
   border: 1px solid #ccc;
   outline: none;
+  font-size: 14px;
 }
 
 #send-button {
@@ -143,26 +139,24 @@
   cursor: pointer;
   font-size: 16px;
 }
-.chat-menu {
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  width: fit-content;
-  margin: 20px auto;
-  font-family: sans-serif;
+
+/* Зурвас */
+.message {
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 14px;
+  max-width: 80%;
+  line-height: 1.4;
 }
-.chat-menu ul {
-  list-style: none;
-  padding: 0;
+
+.message.Та {
+  background-color: #f1e3d5;
+  align-self: flex-end;
+  margin-left: auto;
 }
-.chat-menu li {
-  margin: 10px 0;
-}
-.chat-menu a {
-  text-decoration: none;
-  color: #A28776;
-  font-weight: bold;
-}
-.chat-menu a:hover {
-  text-decoration: underline;
+
+.message.Oyunsanaa {
+  background-color: #f1cb7e;
+  align-self: flex-start;
+  margin-right: auto;
 }
