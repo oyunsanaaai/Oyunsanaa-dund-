@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="mn">
 <head>
@@ -7,47 +8,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Ярилцъя товч -->
   <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
-
-  <!-- Бүх зүйл энд багтана -->
   <div id="chat-container" class="chat-container hidden">
-
-    <!-- Толгой хэсэг -->
-    <div class="chat-header">
+    <div class="chat-header" style="background-color: #A28776;">
       <img src="oyunsanaa-avatar.png" alt="Avatar" class="avatar">
-      <div class="chat-title">
-        <strong>Oyunsanaa – Дунд нас</strong>
-      </div>
+      <div class="chat-title"><strong>Oyunsanaa – Дунд нас</strong></div>
       <div class="chat-controls">
         <span id="menu-toggle">☰</span>
         <span id="minimize-chat">▽</span>
         <span id="close-chat">×</span>
       </div>
     </div>
-
-    <!-- Сэтгэлийн хөтөч -->
-    <div class="guide-container">
-      <h2>Сэтгэлийн хөтөч</h2>
-      <ul>
+    <div id="sidebar" class="sidebar hidden">
+      <div id="guideToggle">Сэтгэлийн хөтөч ▼</div>
+      <ul id="guideMenu" class="submenu hidden">
         <li><a href="chatbot_26-40_engiin.html">26–40 нас (Энгийн)</a></li>
         <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
         <li><a href="chatbot_41-55_engiin.html">41–55 нас (Энгийн)</a></li>
         <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
       </ul>
     </div>
-
-    <!-- Чат харилцаа -->
     <div id="chatbox" class="chatbox"></div>
-
-    <!-- Бичих хэсэг -->
     <div class="chat-input-container">
       <input type="text" id="userInput" placeholder="Бичих..." />
       <button id="send-button">➤</button>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
