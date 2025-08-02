@@ -7,68 +7,47 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="chat-menu">
-  <h3>Сэтгэлийн хөтөч</h3>
-  <ul>
-    <li><a href="chatbot_26-40_engiin.html">26–40 нас (Энгийн)</a></li>
-    <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
-    <li><a href="chatbot_41-55_engiin.html">41–55 нас (Энгийн)</a></li>
-    <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
-  </ul>
-</div>
-<!-- Chat toggle button -->
-<div id="chatToggle" class="chat-toggle">Ярилцъя</div>
 
-<!-- Chat container -->
-<div id="chatContainer" class="chat-container hidden">
-  <div class="chat-header">
-    <img src="oyunsanaa-avatar.png" class="avatar" />
-    <span class="chat-title">Oyunsanaa – Дунд нас</span>
-    <div class="chat-controls">
-      <span id="menuToggle" class="menu-icon">☰</span>
-      <span id="minimizeChat">▽</span>
-      <span id="closeChat">×</span>
+  <!-- Ярилцъя товч -->
+  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
+
+  <!-- Бүх зүйл энд багтана -->
+  <div id="chat-container" class="chat-container hidden">
+
+    <!-- Толгой хэсэг -->
+    <div class="chat-header">
+      <img src="oyunsanaa-avatar.png" alt="Avatar" class="avatar">
+      <div class="chat-title">
+        <strong>Oyunsanaa – Дунд нас</strong>
+      </div>
+      <div class="chat-controls">
+        <span id="menu-toggle">☰</span>
+        <span id="minimize-chat">▽</span>
+        <span id="close-chat">×</span>
+      </div>
+    </div>
+
+    <!-- Сэтгэлийн хөтөч -->
+    <div class="guide-container">
+      <h2>Сэтгэлийн хөтөч</h2>
+      <ul>
+        <li><a href="chatbot_26-40_engiin.html">26–40 нас (Энгийн)</a></li>
+        <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
+        <li><a href="chatbot_41-55_engiin.html">41–55 нас (Энгийн)</a></li>
+        <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
+      </ul>
+    </div>
+
+    <!-- Чат харилцаа -->
+    <div id="chatbox" class="chatbox"></div>
+
+    <!-- Бичих хэсэг -->
+    <div class="chat-input-container">
+      <input type="text" id="userInput" placeholder="Бичих..." />
+      <button id="send-button">➤</button>
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar hidden">
-    <ul>
-      <li class="has-submenu" id="guideToggle">Сэтгэлийн хөтөч ▾
-        <ul class="submenu hidden" id="guideMenu">
-          <li>Бага нас</li>
-          <li>Хөгжиж буй</li>
-          <li>Залуу нас</li>
-          <li>Дунд нас</li>
-          <li>Туршлагатай</li>
-          <li>Ахимаг</li>
-          <li>Премиум</li>
-          <li>Тусгай бүлэг</li>
-        </ul>
-      </li>
-      <li>Бүртгэл</li>
-      <li>Хөтөлбөр</li>
-      <li>Үйлчилгээ</li>
-      <li>Тест</li>
-      <li>Сэтгэлийн боловсрол</li>
-      <li>Видео/Хичээлүүд</li>
-      <li>Өдрийн тэмдэглэл</li>
-      <li>Миний булан</li>
-      <li>Нууц цонх</li>
-    </ul>
-  </div>
-
-  <div id="chatbox" class="chatbox"></div>
-
-  <div class="chat-input">
-    <label for="image-upload" class="upload-icon">+</label>
-    <input type="file" id="image-upload" style="display:none" />
-    <input type="text" id="userInput" placeholder="Бичих..." />
-    <button id="send-button">➤</button>
-  </div>
-</div>
-
-<!-- Script -->
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
