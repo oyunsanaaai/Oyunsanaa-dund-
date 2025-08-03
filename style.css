@@ -1,129 +1,118 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", "Arial", sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .chat-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #A28776;
-  color: #fff;
+  background-color: #7F4B30;
+  color: white;
   padding: 12px 18px;
   border-radius: 25px;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 16px;
   z-index: 1000;
 }
 
 .chat-container {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 400px;
-  max-height: 85%;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  bottom: 80px;
+  right: 20px;
+  width: 360px;
+  max-height: 85vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
   display: flex;
   flex-direction: column;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .chat-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #A28776;
   color: white;
   padding: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
-.avatar {
-  width: 36px;
-  height: 36px;
+.chat-header .avatar {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  margin-right: 10px;
 }
 
 .chat-title {
-  flex-grow: 1;
+  flex: 1;
+  text-align: center;
   font-weight: bold;
 }
 
 .chat-controls span {
+  cursor: pointer;
   margin-left: 10px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-#sidebar {
-  width: 100%;
-  background-color: #f1f1f1;
-  overflow-y: auto;
-  padding: 10px;
-}
-
-.menu-button {
-  display: block;
-  background-color: #ccc;
-  border: none;
-  padding: 12px;
-  margin: 6px 0;
-  text-align: left;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.menu-button:hover {
-  background-color: #bbb;
+  font-size: 20px;
 }
 
 .chatbox {
-  flex-grow: 1;
+  flex: 1;
   padding: 10px;
   overflow-y: auto;
 }
 
-.input-container {
+.chat-input {
   display: flex;
+  padding: 10px;
   border-top: 1px solid #ccc;
 }
 
-#chat-input {
-  flex-grow: 1;
-  padding: 10px;
-  border: none;
-  outline: none;
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-#send-btn {
+.chat-input button {
+  margin-left: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
   background-color: #A28776;
   color: white;
-  border: none;
-  padding: 0 16px;
   cursor: pointer;
 }
 
-.user-message {
-  background-color: #f1e3d5;
+.sidebar {
+  background-color: #f4f4f4;
   padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  align-self: flex-start;
-  max-width: 80%;
 }
 
-.bot-message {
-  background-color: #A28776;
-  color: white;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  align-self: flex-end;
-  max-width: 80%;
+.hidden {
+  display: none;
 }
+
+.guide-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guide-buttons button {
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Chatbot menu button colors */
+.btn-premium { background-color: #7F4B30; color: white; }
+.btn-engiin { background-color: #E1D9C9; color: black; }
+.btn-bagts { background-color: #AD8867; color: white; }
+.btn-haraagui { background-color: #212E40; color: white; }
+.btn-tusgai { background-color: #173125; color: white; }
