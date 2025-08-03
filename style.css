@@ -1,8 +1,13 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
 .chat-toggle {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #c16a5a;
+  background-color: #A28776;
   color: white;
   padding: 10px 16px;
   border-radius: 24px;
@@ -30,7 +35,7 @@
 }
 
 .chat-header {
-  background-color: #c16a5a;
+  background-color: #A28776;
   color: white;
   padding: 10px;
   display: flex;
@@ -76,29 +81,18 @@
   cursor: pointer;
 }
 
-.has-submenu {
-  position: relative;
+.has-submenu > ul {
+  padding-left: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }
 
 .submenu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding-left: 0;
-  width: max-content;
-  z-index: 999;
-}
-
-.submenu.hidden {
   display: none;
 }
 
-.submenu li {
-  white-space: nowrap;
-  padding: 6px 12px;
-  border-bottom: 1px solid #eee;
+.has-submenu:hover .submenu {
+  display: block;
 }
 
 .chatbox {
@@ -115,13 +109,6 @@
   border-top: 1px solid #ccc;
 }
 
-.upload-icon {
-  font-size: 24px;
-  color: #c15a5a;
-  margin-right: 8px;
-  cursor: pointer;
-}
-
 #userInput {
   flex: 1;
   padding: 8px 12px;
@@ -131,7 +118,7 @@
 }
 
 #send-button {
-  background-color: #c15a5a;
+  background-color: #A28776;
   color: white;
   border: none;
   border-radius: 20px;
@@ -140,11 +127,3 @@
   cursor: pointer;
   font-size: 16px;
 }
-
-.chat-menu {
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  width: fit-content;
-  margin: 20px auto;
-  font-family
