@@ -1,72 +1,66 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa – Дунд нас</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
-
-  <div id="chat-container" class="chat-container hidden">
-    <div class="chat-header">
-      <img src="oyunsanaa-avatar.png" alt="Oyunsanaa" class="avatar">
-      <div class="chat-title"><strong>Oyunsanaa – Дунд нас</strong></div>
-      <div class="chat-controls">
-        <span id="menu-toggle">☰</span>
-        <span id="minimize-chat">▽</span>
-        <span id="close-chat">×</span>
-      </div>
-    </div>
-
-    <div id="sidebar" class="sidebar hidden">
-      <ul>
-        <li><span class="menu-group">Сэтгэлийн хөтөч</span>
-          <ul>
-            <li>0–7 нас</li>
-            <li>8–12 нас</li>
-            <li>13–18 нас</li>
-            <li>19–25 нас</li>
-            <li><strong>26–40 нас</strong></li>
-            <li>41–55 нас</li>
-            <li>56–70 нас</li>
-            <li>70+ нас</li>
-          </ul>
-        </li>
-        <li><span class="menu-group">Премиум</span>
-          <ul>
-            <li>0–7 нас (Премиум)</li>
-            <li>8–12 нас (Премиум)</li>
-            <li>... </li>
-          </ul>
-        </li>
-        <li><span class="menu-group">Тусгай үйлчилгээ</span>
-          <ul>
-            <li>Тусгай 1</li>
-            <li>Тусгай 2</li>
-          </ul>
-        </li>
-        <li><span class="menu-group">Багц</span>
-          <ul>
-            <li>Гэр бүл</li>
-            <li>Ажил мэргэжил</li>
-            <li>Спорт, урлаг</li>
-            <li>Анги хамт олон</li>
-            <li>Байгууллага</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div id="chatbox" class="chatbox"></div>
-
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Хай..." />
-      <button id="send-button">➤</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<ul class="sidebar-menu">
+  <li><a href="#">Бүртгэл</a></li>
+  <li class="has-submenu">
+    <a href="#">Сэтгэлийн хөтөч</a>
+    <ul class="submenu">
+      <li class="has-submenu">
+        <a href="#">Энгийн</a>
+        <ul class="submenu">
+          <li><a href="#">Oyunsanaa – 0–7 нас</a></li>
+          <li><a href="#">Oyunsanaa – 8–12 нас</a></li>
+          <li><a href="#">Oyunsanaa – 13–18 нас</a></li>
+          <li><a href="#">Oyunsanaa – 19–25 нас</a></li>
+          <li><a href="#">Oyunsanaa – 26–40 нас</a></li>
+          <li><a href="#">Oyunsanaa – 41–55 нас</a></li>
+          <li><a href="#">Oyunsanaa – 56–70 нас</a></li>
+          <li><a href="#">Oyunsanaa – 70+ нас</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Премиум</a>
+        <ul class="submenu">
+          <li><a href="#">Oyunsanaa – 0–7 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 8–12 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 13–18 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 19–25 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 26–40 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 41–55 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 56–70 нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – 70+ нас (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Тусгай 1 (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Тусгай 2 (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Гэр бүл (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Ажил мэргэжил (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Спорт, урлаг (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Анги хамт олон (Премиум)</a></li>
+          <li><a href="#">Oyunsanaa – Байгууллага (Премиум)</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Тусгай үйлчилгээ</a>
+        <ul class="submenu">
+          <li><a href="#">Oyunsanaa – Тусгай 1</a></li>
+          <li><a href="#">Oyunsanaa – Тусгай 2</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Багц</a>
+        <ul class="submenu">
+          <li><a href="#">Oyunsanaa – Гэр бүл</a></li>
+          <li><a href="#">Oyunsanaa – Ажил мэргэжил</a></li>
+          <li><a href="#">Oyunsanaa – Спорт, урлаг</a></li>
+          <li><a href="#">Oyunsanaa – Анги хамт олон</a></li>
+          <li><a href="#">Oyunsanaa – Байгууллага</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">Хөтөлбөр</a></li>
+  <li><a href="#">Үйлчилгээ</a></li>
+  <li><a href="#">Тест</a></li>
+  <li><a href="#">Сэтгэлийн боловсрол</a></li>
+  <li><a href="#">Видео/Хичээлүүд</a></li>
+  <li><a href="#">Өдрийн тэмдэглэл</a></li>
+  <li><a href="#">Миний булан</a></li>
+  <li><a href="#">Нууц цонх</a></li>
+</ul>
