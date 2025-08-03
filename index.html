@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa – Чат систем</title>
+  <title>Oyunsanaa – Дунд нас</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,22 +13,42 @@
 <div id="chatContainer" class="chat-container hidden">
   <div class="chat-header">
     <img src="oyunsanaa-avatar.png" class="avatar" />
-    <span class="chat-title">Сэтгэлийн хөтөч (чат) ⠿</span>
+    <span class="chat-title">Oyunsanaa – Дунд нас</span>
     <div class="chat-controls">
-      <span id="menuToggle" class="menu-icon">☰ ⠿</span>
+      <span id="menuToggle" class="menu-icon">☰</span>
       <span id="minimizeChat">▽</span>
       <span id="closeChat">×</span>
     </div>
   </div>
 
   <div id="sidebar" class="sidebar hidden">
-    <div class="guide-buttons">
-      <button class="btn-premium">⭐ Премиум</button>
-      <button class="btn-engiin">Энгийн</button>
-      <button class="btn-bagts">Багц</button>
-      <button class="btn-haraagui">⠿ Харааны бэрхшээлтэй</button>
-      <button class="btn-tusgai">Тусгай хэрэгцээт</button>
-    </div>
+    <ul>
+      <li class="has-submenu" id="guideToggle">Сэтгэлийн хөтөч (чат) ⠇⠛⠑⠞
+        <ul class="submenu hidden" id="guideMenu">
+          <li>Бага нас (0–7)</li>
+          <li>Балчир нас (8–12)</li>
+          <li>Өсвөр нас (13–18)</li>
+          <li>Залуу нас (19–25)</li>
+          <li>Дунд нас (26–40)</li>
+          <li>Туршлагатай нас (41–55)</li>
+          <li>Ахимаг нас (56–70)</li>
+          <li>Ахмад нас (70+)</li>
+          <li>⭐ Премиум</li>
+          <li>🟣 Багц</li>
+          <li>🔵 Харааны бэрхшээлтэй ⠇⠛⠑⠞</li>
+          <li>🟤 Тусгай хэрэгцээт</li>
+        </ul>
+      </li>
+      <li>Бүртгэл</li>
+      <li>Хөтөлбөр</li>
+      <li>Үйлчилгээ</li>
+      <li>Тест</li>
+      <li>Сэтгэлийн боловсрол</li>
+      <li>Видео/Хичээлүүд</li>
+      <li>Өдрийн тэмдэглэл</li>
+      <li>Миний булан</li>
+      <li>Нууц цонх</li>
+    </ul>
   </div>
 
   <div id="chatbox" class="chatbox"></div>
