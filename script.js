@@ -1,31 +1,46 @@
-document.getElementById("chat-toggle").addEventListener("click", function () {
-  document.getElementById("chat-container").classList.toggle("hidden");
+document.getElementById("chat-toggle").addEventListener("click", () => {
+  document.getElementById("chat-container").classList.remove("hidden");
 });
 
-document.getElementById("close-chat").addEventListener("click", function () {
+document.getElementById("close-chat").addEventListener("click", () => {
   document.getElementById("chat-container").classList.add("hidden");
 });
 
-document.getElementById("send-button").addEventListener("click", sendMessage);
-document.getElementById("userInput").addEventListener("keypress", function (e) {
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  document.getElementById("sidebar").classList.toggle("hidden");
+});
+
+document.getElementById("send-btn").addEventListener("click", sendMessage);
+document.getElementById("user-input").addEventListener("keypress", function (e) {
   if (e.key === "Enter") sendMessage();
 });
 
 function sendMessage() {
-  const input = document.getElementById("userInput");
-  const text = input.value.trim();
-  if (!text) return;
+  const input = document.getElementById("user-input");
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  const chatbox = document.getElementById("chatbox");
 
   const userMsg = document.createElement("div");
-  userMsg.className = "message user";
-  userMsg.textContent = text;
-  document.getElementById("chatbox").appendChild(userMsg);
+  userMsg.textContent = msg;
+  userMsg.style.textAlign = "left";
+  chatbox.appendChild(userMsg);
 
-  const botMsg = document.createElement("div");
-  botMsg.className = "message bot";
-  botMsg.textContent = "Оюунсанаа: Би ойлголоо. Та үргэлжлүүлэн ярьж болно.";
-  document.getElementById("chatbox").appendChild(botMsg);
+  const reply = document.createElement("div");
+  reply.textContent = "Оюунсанаа: Танд хариу өгч байна...";
+  reply.style.textAlign = "right";
+  reply.style.background = "#f7e1d7";
+  chatbox.appendChild(reply);
 
   input.value = "";
-  document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+  chatbox.scrollTop = chatbox.scrollHeight;
 }
+
+// Scroll control
+document.getElementById("scroll-down").addEventListener("click", () => {
+  document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+});
+document.getElementById("scroll-up").addEventListener("click", () => {
+  document.getElementById("chatbox").scrollTop = 0;
+});
