@@ -1,153 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+}
+
 .chat-toggle {
   position: fixed;
   bottom: 20px;
-  left: 20px;
-  background-color: #c16a5a;
+  right: 20px;
+  background-color: #A28776; /* Дунд насны өнгө */
   color: white;
-  padding: 10px 16px;
-  border-radius: 24px;
+  padding: 12px 20px;
+  border-radius: 30px;
   cursor: pointer;
+  z-index: 1000;
   font-weight: bold;
-  z-index: 10000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .chat-container {
   position: fixed;
   bottom: 80px;
-  left: 20px;
-  width: 360px;
-  height: 80vh;
-  background-color: #fff;
+  right: 20px;
+  width: 370px;
+  max-height: 80vh;
+  background-color: white;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 9999;
+  overflow: hidden;
+  z-index: 1001;
 }
 
-.chat-container.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
 .chat-header {
-  background-color: #c16a5a;
+  background-color: #A28776;
   color: white;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
-.avatar {
-  width: 32px;
-  height: 32px;
+.chat-header .avatar {
+  height: 40px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 10px;
+}
+
+.chat-title {
+  font-weight: bold;
+  flex-grow: 1;
 }
 
 .chat-controls span {
   margin-left: 10px;
   cursor: pointer;
-  font-size: 16px;
-}
-
-.menu-icon {
-  font-size: 20px;
 }
 
 .sidebar {
-  background-color: #f9f9f9;
+  background-color: #F1E3D5;
   padding: 10px;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
-}
-
-.sidebar.hidden {
-  display: none;
+  border-right: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .sidebar ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
 .sidebar li {
-  padding: 8px 12px;
-  border-bottom: 1px solid #ddd;
+  padding: 6px 10px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
-.has-submenu {
-  position: relative;
+.sidebar li:hover {
+  background-color: #e7d4c3;
 }
 
 .submenu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding-left: 0;
-  width: max-content;
-  z-index: 999;
+  list-style: none;
+  padding-left: 20px;
 }
-
-.submenu.hidden {
-  display: none;
-}
-
-.submenu li {
-  white-space: nowrap;
-  padding: 6px 12px;
-  border-bottom: 1px solid #eee;
-}
-
 
 .chatbox {
-  flex: 1;
+  flex-grow: 1;
   padding: 10px;
   overflow-y: auto;
   background-color: #fff;
 }
 
+.message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  clear: both;
+  font-size: 14px;
+}
+
+.message.Та {
+  background-color: #e0e0e0;
+  float: left;
+}
+
+.message.Oyunsanaa {
+  background-color: #F1CB7E;
+  float: right;
+  color: #000;
+}
+
 .chat-input {
   display: flex;
-  align-items: center;
-  padding: 10px;
   border-top: 1px solid #ccc;
+  padding: 10px;
 }
 
-.upload-icon {
-  font-size: 24px;
-  color: #CFE3E2;
-  margin-right: 8px;
-  cursor: pointer;
-}
-
-#userInput {
-  flex: 1;
-  padding: 8px 12px;
-  border-radius: 20px;
+.chat-input input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
   border: 1px solid #ccc;
-  outline: none;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
-#send-button {
-  background-color: #c15a5a;
-  color: white;
+.chat-input button {
+  background-color: #A28776;
   border: none;
+  color: white;
+  padding: 8px 12px;
+  margin-left: 10px;
   border-radius: 20px;
-  padding: 8px 14px;
-  margin-left: 8px;
   cursor: pointer;
   font-size: 16px;
 }
 
-
-
-
-
-
-
-
+.upload-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
