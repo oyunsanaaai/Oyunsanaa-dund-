@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa Chatbot</title>
+  <title>Оюунсанаа – Дунд нас</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
 
   <div id="chat-container" class="chat-container hidden">
     <div class="chat-header">
-      <img src="avatar.png" alt="Avatar" class="avatar">
-      <div class="chat-title"><strong>Oyunsanaa</strong></div>
+      <img src="avatar.png" alt="Оюунсанаа" class="avatar" />
+      <div class="chat-title"><strong>Оюунсанаа – Дунд нас</strong></div>
       <div class="chat-controls">
         <span id="menu-toggle">☰</span>
         <span id="minimize-chat">▽</span>
@@ -24,61 +23,6 @@
     <div id="sidebar" class="sidebar hidden">
       <ul class="sidebar-menu">
         <li><a href="#">Бүртгэл</a></li>
-        <li class="has-submenu">
-          <a href="#">Сэтгэлийн хөтөч</a>
-          <ul class="submenu">
-            <li class="has-submenu">
-              <a href="#">Энгийн</a>
-              <ul class="submenu">
-                <li><a href="#">Oyunsanaa – 0–7 нас</a></li>
-                <li><a href="#">Oyunsanaa – 8–12 нас</a></li>
-                <li><a href="#">Oyunsanaa – 13–18 нас</a></li>
-                <li><a href="#">Oyunsanaa – 19–25 нас</a></li>
-                <li><a href="#">Oyunsanaa – 26–40 нас</a></li>
-                <li><a href="#">Oyunsanaa – 41–55 нас</a></li>
-                <li><a href="#">Oyunsanaa – 56–70 нас</a></li>
-                <li><a href="#">Oyunsanaa – 70+ нас</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <a href="#">Премиум</a>
-              <ul class="submenu">
-                <li><a href="#">Oyunsanaa – 0–7 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 8–12 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 13–18 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 19–25 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 26–40 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 41–55 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 56–70 нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – 70+ нас (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Тусгай 1 (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Тусгай 2 (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Гэр бүл (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Ажил мэргэжил (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Спорт, урлаг (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Анги хамт олон (Премиум)</a></li>
-                <li><a href="#">Oyunsanaa – Байгууллага (Премиум)</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <a href="#">Тусгай үйлчилгээ</a>
-              <ul class="submenu">
-                <li><a href="#">Oyunsanaa – Тусгай 1</a></li>
-                <li><a href="#">Oyunsanaa – Тусгай 2</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <a href="#">Багц</a>
-              <ul class="submenu">
-                <li><a href="#">Oyunsanaa – Гэр бүл</a></li>
-                <li><a href="#">Oyunsanaa – Ажил мэргэжил</a></li>
-                <li><a href="#">Oyunsanaa – Спорт, урлаг</a></li>
-                <li><a href="#">Oyunsanaa – Анги хамт олон</a></li>
-                <li><a href="#">Oyunsanaa – Байгууллага</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
         <li><a href="#">Хөтөлбөр</a></li>
         <li><a href="#">Үйлчилгээ</a></li>
         <li><a href="#">Тест</a></li>
@@ -87,12 +31,19 @@
         <li><a href="#">Өдрийн тэмдэглэл</a></li>
         <li><a href="#">Миний булан</a></li>
         <li><a href="#">Нууц цонх</a></li>
+        <li><a href="chatbots_premium.html">Премиум</a></li>
+        <li><a href="chatbots_packages.html">Багц</a></li>
+        <li><a href="chatbots_special.html">Тусгай үйлчилгээ</a></li>
       </ul>
     </div>
 
-    <div id="chatbox" class="chatbox"></div>
+    <div id="chatbox" class="chatbox">
+      <div class="message bot">Сайн байна уу? Би Оюунсанаа байна. Юу ярилцмаар байна вэ?</div>
+    </div>
+
     <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Сэтгэгдлээ бичнэ үү..." />
+      <input type="text" id="userInput" placeholder="Бичих..." />
+      <button id="send-button">➤</button>
     </div>
   </div>
 
