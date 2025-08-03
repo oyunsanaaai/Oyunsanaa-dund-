@@ -1,46 +1,102 @@
-document.getElementById("chat-toggle").addEventListener("click", () => {
-  document.getElementById("chat-container").classList.remove("hidden");
+// Элементүүдийг олж авна
+const chatToggle = document.getElementById("chatToggle");
+const chatContainer = document.getElementById("chatContainer");
+const closeChat = document.getElementById("closeChat");
+const minimizeChat = document.getElementById("minimizeChat");
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const guideToggle = document.getElementById("guideToggle");
+const guideMenu = document.getElementById("guideMenu");
+const sendButton = document.getElementById("send-button");
+const userInput = document.getElementById("userInput");
+const chatbox = document.getElementById("chatbox");
+
+// Ярилцъя товч → чат нээх
+chatToggle.addEventListener("click", () => {
+  chatContainer.classList.remove("hidden");
+  chatToggle.style.display = "none";
 });
 
-document.getElementById("close-chat").addEventListener("click", () => {
-  document.getElementById("chat-container").classList.add("hidden");
+// Хаах товч
+closeChat.addEventListener("click", () => {
+  chatContainer.classList.add("hidden");
+  chatToggle.style.display = "block";
+  sidebar.classList.add("hidden");
+  guideMenu.classList.add("hidden");
 });
 
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.getElementById("sidebar").classList.toggle("hidden");
+// Багасгах товч
+minimizeChat.addEventListener("click", () => {
+  chatContainer.classList.add("hidden");
+  chatToggle.style.display = "block";
+  sidebar.classList.add("hidden");
+  guideMenu.classList.add("hidden");
 });
 
-document.getElementById("send-btn").addEventListener("click", sendMessage);
-document.getElementById("user-input").addEventListener("keypress", function (e) {
-  if (e.key === "Enter") sendMessage();
+// ☰ Цэс нээх/хаах
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("hidden");
+  guideMenu.classList.add("hidden"); // даралт бүрд submenu хаана
 });
 
-function sendMessage() {
-  const input = document.getElementById("user-input");
-  const msg = input.value.trim();
-  if (!msg) return;
+// Сэтгэлийн хөтөч дэд цэс toggle
+guideToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // доошлох зайлсхийх
+  guideMenu.classList.toggle("hidden");
+});
 
-  const chatbox = document.getElementById("chatbox");
-
-  const userMsg = document.createElement("div");
-  userMsg.textContent = msg;
-  userMsg.style.textAlign = "left";
-  chatbox.appendChild(userMsg);
-
-  const reply = document.createElement("div");
-  reply.textContent = "Оюунсанаа: Танд хариу өгч байна...";
-  reply.style.textAlign = "right";
-  reply.style.background = "#f7e1d7";
-  chatbox.appendChild(reply);
-
-  input.value = "";
+// Мессежийг чат руу нэмэх
+function appendMessage(sender, text) {
+  const messageDiv = document.createElement("div");
+  messageDiv.textContent = sender + ": " + text;
+  messageDiv.className = "message " + sender;
+  chatbox.appendChild(messageDiv);
   chatbox.scrollTop = chatbox.scrollHeight;
 }
 
-// Scroll control
-document.getElementById("scroll-down").addEventListener("click", () => {
-  document.getElementById("chatbox").scrollTop = document.getElementById("chatbox").scrollHeight;
+// ChatGPT хариу (түр загвар)
+function getBotResponse(userText) {
+  if (userText.includes("сайн")) return "Сайн уу! Та өнөөдөр ямар мэдрэмжтэй байна?";
+  if (userText.includes("уучлаарай")) return "Зүгээр ээ, тайван байгаарай.";
+  return "Би ойлголоо. Та үргэлжлүүлэн ярьж болно.";
+}
+
+// Илгээх товч дарахад
+sendButton.addEventListener("click", () => {
+  const text = userInput.value.trim();
+  if (text) {
+    appendMessage("Та", text);
+    const response = getBotResponse(text);
+    setTimeout(() => {
+      appendMessage("Oyunsanaa", response);
+    }, 500);
+    userInput.value = "";
+
+    // Хариу илгээхэд цэсүүд хаагдана
+    sidebar.classList.add("hidden");
+    guideMenu.classList.add("hidden");
+  }
 });
-document.getElementById("scroll-up").addEventListener("click", () => {
-  document.getElementById("chatbox").scrollTop = 0;
+
+// Enter дарж илгээх
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    sendButton.click();
+  }
 });
+
+// Фокус ороход submenu хураагдах
+userInput.addEventListener("focus", () => {
+  guideMenu.classList.add("hidden");
+});
+
+
+
+
+
+
+
+
+
+
+
