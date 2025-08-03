@@ -1,68 +1,101 @@
-<div id="sidebar" class="chat-sidebar hidden">
-  <ul class="submenu">
-    <!-- 1. Бүртгэл -->
-    <li><a href="registration.html">Бүртгэл</a></li>
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyunsanaa – Дунд нас</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- 2. Сэтгэлийн хөтөч -->
-    <li>
-      <details>
-        <summary>Сэтгэлийн хөтөч</summary>
-        <ul>
+  <!-- Ярилцъя товч -->
+  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
 
-          <!-- 2.1 Насны ангилал -->
-          <li><strong>Насны ангилал</strong></li>
-          <li><a href="chatbot_0-7_engiin.html">0–7 нас</a></li>
-          <li><a href="chatbot_8-12_engiin.html">8–12 нас</a></li>
-          <li><a href="chatbot_13-18_engiin.html">13–18 нас</a></li>
-          <li><a href="chatbot_19-25_engiin.html">19–25 нас</a></li>
-          <li><a href="chatbot_26-40_engiin.html">26–40 нас</a></li>
-          <li><a href="chatbot_41-55_engiin.html">41–55 нас</a></li>
-          <li><a href="chatbot_56-70_engiin.html">56–70 нас</a></li>
-          <li><a href="chatbot_70plus_engiin.html">70+ нас</a></li>
+  <!-- Чат бүхэлдээ -->
+  <div id="chat-container" class="chat-container hidden">
 
-          <!-- 2.2 Премиум -->
-          <li><strong>Премиум</strong></li>
-          <li><a href="chatbot_0-7_premium.html">0–7 нас (Премиум)</a></li>
-          <li><a href="chatbot_8-12_premium.html">8–12 нас (Премиум)</a></li>
-          <li><a href="chatbot_13-18_premium.html">13–18 нас (Премиум)</a></li>
-          <li><a href="chatbot_19-25_premium.html">19–25 нас (Премиум)</a></li>
-          <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
-          <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
-          <li><a href="chatbot_56-70_premium.html">56–70 нас (Премиум)</a></li>
-          <li><a href="chatbot_70plus_premium.html">70+ нас (Премиум)</a></li>
-          <li><a href="chatbot_special1_premium.html">Тусгай 1 (Премиум)</a></li>
-          <li><a href="chatbot_special2_premium.html">Тусгай 2 (Премиум)</a></li>
-          <li><a href="chatbot_family_premium.html">Гэр бүл (Премиум)</a></li>
-          <li><a href="chatbot_profession_premium.html">Ажил мэргэжил (Премиум)</a></li>
-          <li><a href="chatbot_sport_art_premium.html">Спорт, урлаг (Премиум)</a></li>
-          <li><a href="chatbot_classmates_premium.html">Анги хамт олон (Премиум)</a></li>
-          <li><a href="chatbot_organization_premium.html">Байгууллага (Премиум)</a></li>
+    <!-- Header -->
+    <div class="chat-header">
+      <img src="avatar.png" alt="Avatar" class="avatar" />
+      <div class="chat-title"><strong>Oyunsanaa – Дунд нас</strong></div>
+      <div class="chat-controls">
+        <span id="menu-toggle">☰</span>
+        <span id="minimize-chat">▽</span>
+        <span id="close-chat">×</span>
+      </div>
+    </div>
 
-          <!-- 2.3 Тусгай -->
-          <li><strong>Тусгай үйлчилгээ</strong></li>
-          <li><a href="chatbot_special1.html">Тусгай 1</a></li>
-          <li><a href="chatbot_special2.html">Тусгай 2</a></li>
+    <!-- Sidebar цэс -->
+    <div id="sidebar" class="chat-sidebar hidden">
+      <ul class="submenu">
+        <li><a href="registration.html">Бүртгэл</a></li>
 
-          <!-- 2.4 Багц -->
-          <li><strong>Багц</strong></li>
-          <li><a href="chatbot_family.html">Гэр бүл</a></li>
-          <li><a href="chatbot_profession.html">Ажил мэргэжил</a></li>
-          <li><a href="chatbot_sport_art.html">Спорт, урлаг</a></li>
-          <li><a href="chatbot_classmates.html">Анги хамт олон</a></li>
-          <li><a href="chatbot_organization.html">Байгууллага</a></li>
+        <li>
+          <details>
+            <summary>Сэтгэлийн хөтөч</summary>
+            <ul>
+              <li><strong>Насны ангилал</strong></li>
+              <li><a href="chatbot_0-7_engiin.html">0–7 нас</a></li>
+              <li><a href="chatbot_8-12_engiin.html">8–12 нас</a></li>
+              <li><a href="chatbot_13-18_engiin.html">13–18 нас</a></li>
+              <li><a href="chatbot_19-25_engiin.html">19–25 нас</a></li>
+              <li><a href="chatbot_26-40_engiin.html">26–40 нас</a></li>
+              <li><a href="chatbot_41-55_engiin.html">41–55 нас</a></li>
+              <li><a href="chatbot_56-70_engiin.html">56–70 нас</a></li>
+              <li><a href="chatbot_70plus_engiin.html">70+ нас</a></li>
 
-        </ul>
-      </details>
-    </li>
+              <li><strong>Премиум</strong></li>
+              <li><a href="chatbot_0-7_premium.html">0–7 нас (Премиум)</a></li>
+              <li><a href="chatbot_8-12_premium.html">8–12 нас (Премиум)</a></li>
+              <li><a href="chatbot_13-18_premium.html">13–18 нас (Премиум)</a></li>
+              <li><a href="chatbot_19-25_premium.html">19–25 нас (Премиум)</a></li>
+              <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
+              <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
+              <li><a href="chatbot_56-70_premium.html">56–70 нас (Премиум)</a></li>
+              <li><a href="chatbot_70plus_premium.html">70+ нас (Премиум)</a></li>
+              <li><a href="chatbot_special1_premium.html">Тусгай 1 (Премиум)</a></li>
+              <li><a href="chatbot_special2_premium.html">Тусгай 2 (Премиум)</a></li>
+              <li><a href="chatbot_family_premium.html">Гэр бүл (Премиум)</a></li>
+              <li><a href="chatbot_profession_premium.html">Ажил мэргэжил (Премиум)</a></li>
+              <li><a href="chatbot_sport_art_premium.html">Спорт, урлаг (Премиум)</a></li>
+              <li><a href="chatbot_classmates_premium.html">Анги хамт олон (Премиум)</a></li>
+              <li><a href="chatbot_organization_premium.html">Байгууллага (Премиум)</a></li>
 
-    <!-- Үлдсэн үндсэн цэсүүд -->
-    <li><a href="program.html">Хөтөлбөр</a></li>
-    <li><a href="services.html">Үйлчилгээ</a></li>
-    <li><a href="test.html">Тест</a></li>
-    <li><a href="education.html">Сэтгэлийн боловсрол</a></li>
-    <li><a href="videos.html">Видео/Хичээлүүд</a></li>
-    <li><a href="diary.html">Өдрийн тэмдэглэл</a></li>
-    <li><a href="profile.html">Миний булан</a></li>
-    <li><a href="secret.html">Нууц цонх</a></li>
-  </ul>
-</div>
+              <li><strong>Тусгай үйлчилгээ</strong></li>
+              <li><a href="chatbot_special1.html">Тусгай 1</a></li>
+              <li><a href="chatbot_special2.html">Тусгай 2</a></li>
+
+              <li><strong>Багц</strong></li>
+              <li><a href="chatbot_family.html">Гэр бүл</a></li>
+              <li><a href="chatbot_profession.html">Ажил мэргэжил</a></li>
+              <li><a href="chatbot_sport_art.html">Спорт, урлаг</a></li>
+              <li><a href="chatbot_classmates.html">Анги хамт олон</a></li>
+              <li><a href="chatbot_organization.html">Байгууллага</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <li><a href="program.html">Хөтөлбөр</a></li>
+        <li><a href="services.html">Үйлчилгээ</a></li>
+        <li><a href="test.html">Тест</a></li>
+        <li><a href="education.html">Сэтгэлийн боловсрол</a></li>
+        <li><a href="videos.html">Видео/Хичээлүүд</a></li>
+        <li><a href="diary.html">Өдрийн тэмдэглэл</a></li>
+        <li><a href="profile.html">Миний булан</a></li>
+        <li><a href="secret.html">Нууц цонх</a></li>
+      </ul>
+    </div>
+
+    <!-- Чат хэсэг -->
+    <div id="chatbox" class="chatbox"></div>
+
+    <!-- Бичих хэсэг -->
+    <div class="chat-input">
+      <input type="text" placeholder="Хай..." />
+      <button>➤</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
