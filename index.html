@@ -1,20 +1,74 @@
-<ul class="sidebar-menu">
-  <li><a href="#">Бүртгэл</a></li>
-  <li class="has-submenu">
-    <a href="#">Сэтгэлийн хөтөч</a>
-    <ul class="submenu">
-      <li><a href="chatbots_standard.html">Энгийн</a></li>
-      <li><a href="chatbots_premium.html">Премиум</a></li>
-      <li><a href="chatbots_special.html">Тусгай үйлчилгээ</a></li>
-      <li><a href="chatbots_packages.html">Багц</a></li>
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyunsanaa – Дунд нас</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Chat toggle button -->
+<div id="chatToggle" class="chat-toggle">Ярилцъя</div>
+
+<!-- Chat container -->
+<div id="chatContainer" class="chat-container hidden">
+  <div class="chat-header">
+    <img src="oyunsanaa-avatar.png" class="avatar" />
+    <span class="chat-title">Oyunsanaa – Дунд нас</span>
+    <div class="chat-controls">
+      <span id="menuToggle" class="menu-icon">☰</span>
+      <span id="minimizeChat">▽</span>
+      <span id="closeChat">×</span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar hidden">
+    <ul>
+      <li class="has-submenu" id="guideToggle">Сэтгэлийн хөтөч ▾
+        <ul class="submenu hidden" id="guideMenu">
+          <li>Бага нас</li>
+          <li>Хөгжиж буй</li>
+          <li>Залуу нас</li>
+          <li>Дунд нас</li>
+          <li>Туршлагатай</li>
+          <li>Ахимаг</li>
+          <li>Премиум</li>
+          <li>Тусгай бүлэг</li>
+        </ul>
+      </li>
+      <li>Бүртгэл</li>
+      <li>Хөтөлбөр</li>
+      <li>Үйлчилгээ</li>
+      <li>Тест</li>
+      <li>Сэтгэлийн боловсрол</li>
+      <li>Видео/Хичээлүүд</li>
+      <li>Өдрийн тэмдэглэл</li>
+      <li>Миний булан</li>
+      <li>Нууц цонх</li>
     </ul>
-  </li>
-  <li><a href="#">Хөтөлбөр</a></li>
-  <li><a href="#">Үйлчилгээ</a></li>
-  <li><a href="#">Тест</a></li>
-  <li><a href="#">Сэтгэлийн боловсрол</a></li>
-  <li><a href="#">Видео/Хичээлүүд</a></li>
-  <li><a href="#">Өдрийн тэмдэглэл</a></li>
-  <li><a href="#">Миний булан</a></li>
-  <li><a href="#">Нууц цонх</a></li>
-</ul>
+  </div>
+
+  <div id="chatbox" class="chatbox"></div>
+
+  <div class="chat-input">
+    <label for="image-upload" class="upload-icon">+</label>
+    <input type="file" id="image-upload" style="display:none" />
+    <input type="text" id="userInput" placeholder="Бичих..." />
+    <button id="send-button">➤</button>
+  </div>
+</div>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
