@@ -1,43 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa Chatbot</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Сэтгэлийн хөтөч (чат)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .braille {
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 4px;
+    }
+
+    /* Энгийн */
+    .engiin-0-7 { background-color: #E1D9C9; color: black; }
+    .engiin-8-12 { background-color: #AE9372; }
+    .engiin-13-18 { background-color: #B27D57; }
+    .engiin-19-25 { background-color: #7F4B30; }
+    .engiin-26-40 { background-color: #A28776; }
+    .engiin-41-55 { background-color: #7D8769; }
+    .engiin-56-70 { background-color: #424C21; }
+    .engiin-70plus { background-color: #173125; }
+
+    /* Премиум */
+    .premium { background-color: #173125; }
+
+    /* Тусгай хэрэгцээт */
+    .special { background-color: #212E40; }
+
+    /* Багц */
+    .bagts-gerbul { background-color: #D8A48F; color: black; }
+    .bagts-ajil { background-color: #7B5E57; }
+    .bagts-sport { background-color: #9A6B4F; }
+    .bagts-angi { background-color: #AD8867; }
+    .bagts-baiguullaga { background-color: #C1B7A3; color: black; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .btn {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
-  <div id="chat-container" class="chat-container hidden">
-    <div class="chat-header">
-      <img src="avatar.png" alt="Avatar" class="avatar">
-      <div class="chat-title"><strong>Оюунсанаа</strong></div>
-      <div class="chat-controls">
-        <span id="menu-toggle">☰ ⠍⠑⠝⠥</span>
-        <span id="minimize-chat">▽</span>
-        <span id="close-chat">×</span>
-      </div>
-    </div>
 
-    <div id="sidebar" class="sidebar">
-      <h3>Сэтгэлийн хөтөч (чат) ⠎⠧⠵⠪⠍⠦⠤⠗</h3>
-      <ul>
-        <li><button class="menu-btn" style="background-color:#173125;">Премиум (чат)</button></li>
-        <li><button class="menu-btn" style="background-color:#E1D9C9;">Энгийн (чат)</button></li>
-        <li><button class="menu-btn" style="background-color:#D8A48F;">Багц (чат)</button></li>
-        <li><button class="menu-btn" style="background-color:#212E40;">Харааны бэрхшээлтэй (чат) ⠓⠁⠗⠁⠁⠝⠮</button></li>
-        <li><button class="menu-btn" style="background-color:#212E40;">Тусгай хэрэгцээт (чат)</button></li>
-      </ul>
-    </div>
+  <h1>Сэтгэлийн хөтөч (чат) <span class="braille">⠎⠧⠞⠳⠮⠇</span></h1>
 
-    <div id="chatbox" class="chatbox"></div>
+  <h2>1. 💎 Премиум (чат)</h2>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 0–7 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 8–12 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 13–18 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 19–25 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 26–40 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 41–55 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 56–70 нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум 70+ нас (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум Тусгай (чат)</a>
+  <a href="#" class="btn premium">Oyunsanaa – Премиум Багц (чат)</a>
 
-    <form id="chat-form" class="chat-form">
-      <input type="text" id="user-input" placeholder="Сэтгэлээ хуваалцана уу..." autocomplete="off" />
-      <button type="submit">Илгээх</button>
-    </form>
-  </div>
-  <script src="js/script.js"></script>
+  <h2>2. 🔶 Энгийн (чат)</h2>
+  <a href="#" class="btn engiin-0-7">Oyunsanaa – 0–7 нас (чат)</a>
+  <a href="#" class="btn engiin-8-12">Oyunsanaa – 8–12 нас (чат)</a>
+  <a href="#" class="btn engiin-13-18">Oyunsanaa – 13–18 нас (чат)</a>
+  <a href="#" class="btn engiin-19-25">Oyunsanaa – 19–25 нас (чат)</a>
+  <a href="#" class="btn engiin-26-40">Oyunsanaa – 26–40 нас (чат)</a>
+  <a href="#" class="btn engiin-41-55">Oyunsanaa – 41–55 нас (чат)</a>
+  <a href="#" class="btn engiin-56-70">Oyunsanaa – 56–70 нас (чат)</a>
+  <a href="#" class="btn engiin-70plus">Oyunsanaa – 70+ нас (чат)</a>
+
+  <h2>3. 🟣 Багц (чат)</h2>
+  <a href="#" class="btn bagts-gerbul">Oyunsanaa – Гэр бүл (чат)</a>
+  <a href="#" class="btn bagts-ajil">Oyunsanaa – Ажил мэргэжлийн (чат)</a>
+  <a href="#" class="btn bagts-sport">Oyunsanaa – Спорт, урлагийн (чат)</a>
+  <a href="#" class="btn bagts-angi">Oyunsanaa – Анги хамт олон (чат)</a>
+  <a href="#" class="btn bagts-baiguullaga">Oyunsanaa – Байгууллага (чат)</a>
+
+  <h2>4. 🔵 Харааны бэрхшээлтэй (чат) <span class="braille">⠓⠁⠗⠁⠁⠛⠥⠩</span></h2>
+  <a href="#" class="btn special">Oyunsanaa – Хараагүйчүүд (чат)</a>
+
+  <h2>5. 🟤 Тусгай хэрэгцээт (чат)</h2>
+  <a href="#" class="btn special">Oyunsanaa – Тусгай хэрэгцээт (чат)</a>
+
 </body>
 </html>
