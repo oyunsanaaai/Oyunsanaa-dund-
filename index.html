@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="mn">
 <head>
@@ -8,32 +7,81 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
-  <div id="chat-container" class="chat-container hidden">
-    <div class="chat-header" style="background-color: #A28776;">
-      <img src="oyunsanaa-avatar.png" alt="Avatar" class="avatar">
-      <div class="chat-title"><strong>Oyunsanaa – Дунд нас</strong></div>
-      <div class="chat-controls">
-        <span id="menu-toggle">☰</span>
-        <span id="minimize-chat">▽</span>
-        <span id="close-chat">×</span>
-      </div>
-    </div>
-    <div id="sidebar" class="sidebar hidden">
-      <div id="guideToggle">Сэтгэлийн хөтөч ▼</div>
-      <ul id="guideMenu" class="submenu hidden">
-        <li><a href="chatbot_26-40_engiin.html">26–40 нас (Энгийн)</a></li>
-        <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
-        <li><a href="chatbot_41-55_engiin.html">41–55 нас (Энгийн)</a></li>
-        <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
-      </ul>
-    </div>
-    <div id="chatbox" class="chatbox"></div>
-    <div class="chat-input-container">
-      <input type="text" id="userInput" placeholder="Бичих..." />
-      <button id="send-button">➤</button>
+
+<!-- Ярилцъя товч -->
+<div id="chatToggle" class="chat-toggle">Ярилцъя</div>
+
+<!-- Чат интерфейс -->
+<div id="chatContainer" class="chat-container hidden">
+  <div class="chat-header">
+    <img src="oyunsanaa-avatar.png" class="avatar" />
+    <span class="chat-title">Oyunsanaa – Дунд нас</span>
+    <div class="chat-controls">
+      <span id="menuToggle" class="menu-icon">☰</span>
+      <span id="minimizeChat">▽</span>
+      <span id="closeChat">×</span>
     </div>
   </div>
-  <script src="script.js"></script>
+
+  <!-- Хажуу цэс -->
+  <div id="sidebar" class="sidebar hidden">
+    <ul>
+      <li class="has-submenu" id="guideToggle">Сэтгэлийн хөтөч ▾
+        <ul class="submenu hidden" id="guideMenu">
+          <li><a href="#">1. 0–7 нас</a></li>
+          <li><a href="#">2. 8–12 нас</a></li>
+          <li><a href="#">3. 13–18 нас</a></li>
+          <li><a href="#">4. 19–25 нас</a></li>
+          <li><a href="#">5. 26–40 нас</a></li>
+          <li><a href="#">6. 41–55 нас</a></li>
+          <li><a href="#">7. 56–70 нас</a></li>
+          <li><a href="#">8. 70+ нас</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu">Премиум ▾
+        <ul class="submenu">
+          <li><a href="#">0–7 нас (Премиум)</a></li>
+          <li><a href="#">8–12 нас (Премиум)</a></li>
+          <li><a href="#">13–18 нас (Премиум)</a></li>
+          <li><a href="#">19–25 нас (Премиум)</a></li>
+          <li><a href="#">26–40 нас (Премиум)</a></li>
+          <li><a href="#">41–55 нас (Премиум)</a></li>
+          <li><a href="#">56–70 нас (Премиум)</a></li>
+          <li><a href="#">70+ нас (Премиум)</a></li>
+          <li><a href="#">Премиум байгууллага</a></li>
+          <li><a href="#">Премиум тусгай бүлэг</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu">Тусгай үйлчилгээ ▾
+        <ul class="submenu">
+          <li><a href="#">Тусгай хэрэгцээ 1</a></li>
+          <li><a href="#">Тусгай хэрэгцээ 2</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu">Багц ▾
+        <ul class="submenu">
+          <li><a href="#">1. Гэр бүл</a></li>
+          <li><a href="#">2. Ажил мэргэжил</a></li>
+          <li><a href="#">3. Сургалт, анги</a></li>
+          <li><a href="#">4. Спорт, урлаг</a></li>
+          <li><a href="#">5. Байгууллага</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Чат хэсэг -->
+  <div id="chatbox" class="chatbox"></div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Бичих..." />
+    <button id="send-button">➤</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
