@@ -1,67 +1,43 @@
-<div id="sidebar" class="sidebar hidden">
-  <ul>
-    <li>Үндсэн меню</li>
 
-    <li class="has-submenu" id="guideToggle">Сэтгэлийн хөтөч (чатууд) ▾
-      <ul class="submenu hidden" id="guideMenu">
-        <!-- Энгийн насны ангилал -->
-        <li><a href="chatbot_kids.html">0–7 нас – Бага нас</a></li>
-        <li><a href="chatbot_juniors.html">8–12 нас – Хөгжиж буй</a></li>
-        <li><a href="chatbot_teens.html">13–18 нас – Залуу нас</a></li>
-        <li><a href="chatbot_youth.html">19–25 нас – Идэр нас</a></li>
-        <li><a href="chatbot_26-40_engiin.html">26–40 нас – Дунд нас</a></li>
-        <li><a href="chatbot_41-55_engiin.html">41–55 нас – Туршлагатай</a></li>
-        <li><a href="chatbot_56-70.html">56–70 нас – Ахимаг</a></li>
-        <li><a href="chatbot_70plus.html">70+ нас – Өндөр нас</a></li>
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyunsanaa Chatbot</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
+  <div id="chat-container" class="chat-container hidden">
+    <div class="chat-header">
+      <img src="avatar.png" alt="Avatar" class="avatar">
+      <div class="chat-title"><strong>Оюунсанаа</strong></div>
+      <div class="chat-controls">
+        <span id="menu-toggle">☰ ⠍⠑⠝⠥</span>
+        <span id="minimize-chat">▽</span>
+        <span id="close-chat">×</span>
+      </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+      <h3>Сэтгэлийн хөтөч (чат) ⠎⠧⠵⠪⠍⠦⠤⠗</h3>
+      <ul>
+        <li><button class="menu-btn" style="background-color:#173125;">Премиум (чат)</button></li>
+        <li><button class="menu-btn" style="background-color:#E1D9C9;">Энгийн (чат)</button></li>
+        <li><button class="menu-btn" style="background-color:#D8A48F;">Багц (чат)</button></li>
+        <li><button class="menu-btn" style="background-color:#212E40;">Харааны бэрхшээлтэй (чат) ⠓⠁⠗⠁⠁⠝⠮</button></li>
+        <li><button class="menu-btn" style="background-color:#212E40;">Тусгай хэрэгцээт (чат)</button></li>
       </ul>
-    </li>
+    </div>
 
-    <li class="has-submenu">Премиум (чатууд) ▾
-      <ul class="submenu hidden">
-        <li><a href="chatbot_kids_premium.html">0–7 нас (Премиум)</a></li>
-        <li><a href="chatbot_juniors_premium.html">8–12 нас (Премиум)</a></li>
-        <li><a href="chatbot_teens_premium.html">13–18 нас (Премиум)</a></li>
-        <li><a href="chatbot_youth_premium.html">19–25 нас (Премиум)</a></li>
-        <li><a href="chatbot_26-40_premium.html">26–40 нас (Премиум)</a></li>
-        <li><a href="chatbot_41-55_premium.html">41–55 нас (Премиум)</a></li>
-        <li><a href="chatbot_56-70_premium.html">56–70 нас (Премиум)</a></li>
-        <li><a href="chatbot_70plus_premium.html">70+ нас (Премиум)</a></li>
-        <li><a href="chatbot_visually_impaired_premium.html">Хараагүйчүүд (Премиум)</a></li>
-        <li><a href="chatbot_special_needs_premium.html">Тусгай хэрэгцээт (Премиум)</a></li>
-        <li><a href="chatbot_family_premium.html">Гэр бүл (Премиум)</a></li>
-        <li><a href="chatbot_class_premium.html">Анги хамт олон (Премиум)</a></li>
-        <li><a href="chatbot_job_premium.html">Ажил мэргэжил (Премиум)</a></li>
-        <li><a href="chatbot_org_premium.html">Байгууллага (Премиум)</a></li>
-        <li><a href="chatbot_art_sport_premium.html">Урлаг, спорт (Премиум)</a></li>
-      </ul>
-    </li>
+    <div id="chatbox" class="chatbox"></div>
 
-    <li class="has-submenu">Тусгай үйлчилгээ (чатууд) ▾
-      <ul class="submenu hidden">
-        <li><a href="chatbot_visually_impaired.html">Хараагүйчүүд – Blind users</a></li>
-        <li><a href="chatbot_special_needs.html">Тусгай хэрэгцээт – Special Needs</a></li>
-      </ul>
-    </li>
-
-    <li class="has-submenu">Багц (чатууд) ▾
-      <ul class="submenu hidden">
-        <li><a href="chatbot_family.html">1. Гэр бүл</a></li>
-        <li><a href="chatbot_class.html">2. Анги хамт олон</a></li>
-        <li><a href="chatbot_job.html">3. Ажил мэргэжил</a></li>
-        <li><a href="chatbot_org.html">4. Байгууллага</a></li>
-        <li><a href="chatbot_art_sport.html">5. Урлаг, спорт</a></li>
-      </ul>
-    </li>
-
-    <!-- Үндсэн бусад цэсүүд -->
-    <li><a href="burtgel.html">Бүртгэл</a></li>
-    <li><a href="hutulbur.html">Хөтөлбөр</a></li>
-    <li><a href="uilchilgee.html">Үйлчилгээ</a></li>
-    <li><a href="test.html">Тест</a></li>
-    <li><a href="education.html">Сэтгэлийн боловсрол</a></li>
-    <li><a href="video.html">Видео / Хичээлүүд</a></li>
-    <li><a href="diary.html">Өдрийн тэмдэглэл</a></li>
-    <li><a href="minii-bulan.html">Миний булан</a></li>
-    <li><a href="nuuts.html">Нууц цонх</a></li>
-  </ul>
-</div>
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="user-input" placeholder="Сэтгэлээ хуваалцана уу..." autocomplete="off" />
+      <button type="submit">Илгээх</button>
+    </form>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
