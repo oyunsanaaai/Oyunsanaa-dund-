@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa Chatbot</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
-
-  <div id="chat-container" class="chat-container hidden">
-    <div class="chat-header">
-      <img src="avatar.png" alt="Avatar" class="avatar" />
-      <div class="chat-title"><strong>Oyunsanaa</strong></div>
-      <div class="chat-controls">
-        <span id="menu-toggle">☰</span>
-        <span id="minimize-chat">▽</span>
-        <span id="close-chat">×</span>
-      </div>
-    </div>
-
-    <div id="sidebar" class="chat-sidebar hidden">
-      <ul class="submenu">
-        <li><strong>Сэтгэлийн хөтөч</strong></li>
+<ul class="submenu">
+  <li><strong>Үндсэн цэс</strong></li>
+  <li>
+    <details>
+      <summary>Сэтгэлийн хөтөч</summary>
+      <ul>
         <li><a href="chatbot_0-7_engiin.html">Oyunsanaa – 0–7 нас (Энгийн)</a></li>
         <li><a href="chatbot_8-12_engiin.html">Oyunsanaa – 8–12 нас (Энгийн)</a></li>
         <li><a href="chatbot_13-18_engiin.html">Oyunsanaa – 13–18 нас (Энгийн)</a></li>
@@ -32,9 +13,13 @@
         <li><a href="chatbot_56-70_engiin.html">Oyunsanaa – 56–70 нас (Энгийн)</a></li>
         <li><a href="chatbot_70plus_engiin.html">Oyunsanaa – 70+ нас (Энгийн)</a></li>
       </ul>
+    </details>
+  </li>
 
-      <ul class="submenu">
-        <li><strong>Премиум</strong></li>
+  <li>
+    <details>
+      <summary>Премиум</summary>
+      <ul>
         <li><a href="chatbot_0-7_premium.html">Oyunsanaa – 0–7 нас (Премиум)</a></li>
         <li><a href="chatbot_8-12_premium.html">Oyunsanaa – 8–12 нас (Премиум)</a></li>
         <li><a href="chatbot_13-18_premium.html">Oyunsanaa – 13–18 нас (Премиум)</a></li>
@@ -43,33 +28,42 @@
         <li><a href="chatbot_41-55_premium.html">Oyunsanaa – 41–55 нас (Премиум)</a></li>
         <li><a href="chatbot_56-70_premium.html">Oyunsanaa – 56–70 нас (Премиум)</a></li>
         <li><a href="chatbot_70plus_premium.html">Oyunsanaa – 70+ нас (Премиум)</a></li>
-        <li><a href="chatbot_special1_premium.html">Oyunsanaa – Тусгай хэрэгцээт 1 (Премиум)</a></li>
-        <li><a href="chatbot_special2_premium.html">Oyunsanaa – Тусгай хэрэгцээт 2 (Премиум)</a></li>
+        <li><a href="chatbot_special1_premium.html">Тусгай хэрэгцээт 1 (Премиум)</a></li>
+        <li><a href="chatbot_special2_premium.html">Тусгай хэрэгцээт 2 (Премиум)</a></li>
       </ul>
+    </details>
+  </li>
 
-      <ul class="submenu">
-        <li><strong>Тусгай үйлчилгээ</strong></li>
-        <li><a href="chatbot_special1.html">Oyunsanaa – Тусгай хэрэгцээт 1</a></li>
-        <li><a href="chatbot_special2.html">Oyunsanaa – Тусгай хэрэгцээт 2</a></li>
+  <li>
+    <details>
+      <summary>Тусгай үйлчилгээ</summary>
+      <ul>
+        <li><a href="chatbot_special1.html">Тусгай хэрэгцээт 1</a></li>
+        <li><a href="chatbot_special2.html">Тусгай хэрэгцээт 2</a></li>
       </ul>
+    </details>
+  </li>
 
-      <ul class="submenu">
-        <li><strong>Багц</strong></li>
-        <li><a href="chatbot_family.html">Oyunsanaa – Гэр бүл</a></li>
-        <li><a href="chatbot_profession.html">Oyunsanaa – Ажил мэргэжил</a></li>
-        <li><a href="chatbot_sport_art.html">Oyunsanaa – Спорт, урлаг</a></li>
-        <li><a href="chatbot_classmates.html">Oyunsanaa – Анги хамт олон</a></li>
-        <li><a href="chatbot_organization.html">Oyunsanaa – Байгууллага</a></li>
+  <li>
+    <details>
+      <summary>Багц</summary>
+      <ul>
+        <li><a href="chatbot_family.html">Гэр бүл</a></li>
+        <li><a href="chatbot_profession.html">Ажил мэргэжил</a></li>
+        <li><a href="chatbot_sport_art.html">Спорт, урлаг</a></li>
+        <li><a href="chatbot_classmates.html">Анги хамт олон</a></li>
+        <li><a href="chatbot_organization.html">Байгууллага</a></li>
       </ul>
-    </div>
+    </details>
+  </li>
 
-    <div id="chatbox" class="chatbox"></div>
-    <div class="chat-input">
-      <input type="text" placeholder="Энд бичээрэй..." />
-      <button>Илгээх</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <li><a href="registration.html">Бүртгэл</a></li>
+  <li><a href="program.html">Хөтөлбөр</a></li>
+  <li><a href="services.html">Үйлчилгээ</a></li>
+  <li><a href="test.html">Тест</a></li>
+  <li><a href="education.html">Сэтгэлийн боловсрол</a></li>
+  <li><a href="videos.html">Видео/Хичээлүүд</a></li>
+  <li><a href="diary.html">Өдрийн тэмдэглэл</a></li>
+  <li><a href="profile.html">Миний булан</a></li>
+  <li><a href="secret.html">Нууц цонх</a></li>
+</ul>
