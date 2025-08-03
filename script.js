@@ -1,52 +1,78 @@
-const chatbotButtons = document.getElementById("chatbot-buttons");
+const chatToggle = document.getElementById("chatToggle");
+const chatContainer = document.getElementById("chatContainer");
+const closeChat = document.getElementById("closeChat");
+const minimizeChat = document.getElementById("minimizeChat");
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const guideToggle = document.getElementById("guideToggle");
+const guideMenu = document.getElementById("guideMenu");
+const sendButton = document.getElementById("send-button");
+const userInput = document.getElementById("userInput");
+const chatbox = document.getElementById("chatbox");
 
-const chatbots = {
-  premium: [
-    "Оюунсанаа – ⭐ 0–7 нас (чат)",
-    "Оюунсанаа – ⭐ 8–12 нас (чат)",
-    "Оюунсанаа – ⭐ 13–18 нас (чат)",
-    "Оюунсанаа – ⭐ 19–25 нас (чат)",
-    "Оюунсанаа – ⭐ 26–40 нас (чат)",
-    "Оюунсанаа – ⭐ 41–55 нас (чат)",
-    "Оюунсанаа – ⭐ 56–70 нас (чат)",
-    "Оюунсанаа – ⭐ 70+ нас (чат)",
-    "Оюунсанаа – ⭐ Тусгай (чат)",
-    "Оюунсанаа – ⭐ Багц (чат)",
-  ],
-  standard: [
-    "Оюунсанаа – Бага нас 0–7 (чат)",
-    "Оюунсанаа – Балчир нас 8–12 (чат)",
-    "Оюунсанаа – Өсвөр нас 13–18 (чат)",
-    "Оюунсанаа – Залуу нас 19–25 (чат)",
-    "Оюунсанаа – Дунд нас 26–40 (чат)",
-    "Оюунсанаа – Ахимаг нас 41–55 (чат)",
-    "Оюунсанаа – Ахмад нас 56–70 (чат)",
-    "Оюунсанаа – Нас өндөр 70+ (чат)",
-  ],
-  package: [
-    "Оюунсанаа – Гэр бүл (чат)",
-    "Оюунсанаа – Ажил мэргэжлийн (чат)",
-    "Оюунсанаа – Спорт, урлагийн (чат)",
-    "Оюунсанаа – Анги хамт олон (чат)",
-    "Оюунсанаа – Байгууллага (чат)",
-  ],
-  blind: [
-    "Оюунсанаа – Хараагүйчүүд (чат)",
-  ],
-  special: [
-    "Оюунсанаа – Тусгай хэрэгцээт (чат)",
-  ]
-};
+chatToggle.addEventListener("click", () => {
+  chatContainer.classList.remove("hidden");
+  chatToggle.style.display = "none";
+});
 
-function showGroup(group) {
-  chatbotButtons.innerHTML = "";
-  const list = chatbots[group];
-  list.forEach((label, index) => {
-    const btn = document.createElement("button");
-    btn.textContent = label;
-    if (group === "standard") btn.className = `standard-${index}`;
-    else if (group === "package") btn.className = `package-${index}`;
-    else btn.className = group;
-    chatbotButtons.appendChild(btn);
-  });
+closeChat.addEventListener("click", () => {
+  chatContainer.classList.add("hidden");
+  chatToggle.style.display = "block";
+  sidebar.classList.add("hidden");
+  guideMenu.classList.add("hidden");
+});
+
+minimizeChat.addEventListener("click", () => {
+  chatContainer.classList.add("hidden");
+  chatToggle.style.display = "block";
+  sidebar.classList.add("hidden");
+  guideMenu.classList.add("hidden");
+});
+
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("hidden");
+  guideMenu.classList.add("hidden");
+});
+
+guideToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  guideMenu.classList.toggle("hidden");
+});
+
+function appendMessage(sender, text) {
+  const messageDiv = document.createElement("div");
+  messageDiv.textContent = sender + ": " + text;
+  messageDiv.className = "message " + sender;
+  chatbox.appendChild(messageDiv);
+  chatbox.scrollTop = chatbox.scrollHeight;
 }
+
+function getBotResponse(userText) {
+  if (userText.includes("сайн")) return "Сайн уу! Та өнөөдөр ямар мэдрэмжтэй байна?";
+  if (userText.includes("уучлаарай")) return "Зүгээр ээ, тайван байгаарай.";
+  return "Би ойлголоо. Та үргэлжлүүлэн ярьж болно.";
+}
+
+sendButton.addEventListener("click", () => {
+  const text = userInput.value.trim();
+  if (text) {
+    appendMessage("Та", text);
+    const response = getBotResponse(text);
+    setTimeout(() => {
+      appendMessage("Oyunsanaa", response);
+    }, 500);
+    userInput.value = "";
+    sidebar.classList.add("hidden");
+    guideMenu.classList.add("hidden");
+  }
+});
+
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    sendButton.click();
+  }
+});
+
+userInput.addEventListener("focus", () => {
+  guideMenu.classList.add("hidden");
+});
