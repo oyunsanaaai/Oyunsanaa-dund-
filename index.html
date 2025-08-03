@@ -1,89 +1,20 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Оюунсанаа – Дунд нас</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div id="chat-toggle" class="chat-toggle">Ярилцъя</div>
-
-  <div id="chat-container" class="chat-container hidden">
-    <div class="chat-header">
-      <img src="avatar.png" alt="Оюунсанаа" class="avatar">
-      <div class="chat-title"><strong>Оюунсанаа – Дунд нас</strong></div>
-      <div class="chat-controls">
-        <span id="menu-toggle">☰</span>
-        <span id="scroll-down">↓</span>
-        <span id="scroll-up">↑</span>
-        <span id="minimize-chat">▽</span>
-        <span id="close-chat">×</span>
-      </div>
-    </div>
-
-    <div id="sidebar" class="sidebar hidden">
-      <!-- Энд өмнө бичсэн sidebar-menu-гийн бүтцийг оруулна -->
-      <ul class="sidebar-menu">
-        <li><a href="#">Бүртгэл</a></li>
-        <li class="has-submenu">
-          <a href="#">Сэтгэлийн хөтөч</a>
-          <ul class="submenu">
-            <li class="has-submenu">
-              <a href="#">Энгийн</a>
-              <ul class="submenu">
-                <li><a href="#">Оюунсанаа – 0–7 нас</a></li>
-                <li><a href="#">Оюунсанаа – 8–12 нас</a></li>
-                <li><a href="#">Оюунсанаа – 13–18 нас</a></li>
-                <li><a href="#">Оюунсанаа – 19–25 нас</a></li>
-                <li><a href="#">Оюунсанаа – 26–40 нас</a></li>
-                <li><a href="#">Оюунсанаа – 41–55 нас</a></li>
-                <li><a href="#">Оюунсанаа – 56–70 нас</a></li>
-                <li><a href="#">Оюунсанаа – 70+ нас</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <a href="#">Премиум</a>
-              <ul class="submenu">
-                <li><a href="#">Оюунсанаа – 0–7 нас (Премиум)</a></li>
-                <!-- Үлдсэн премиумууд -->
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <a href="#">Тусгай үйлчилгээ</a>
-              <ul class="submenu">
-                <li><a href="#">Оюунсанаа – Тусгай 1</a></li>
-                <li><a href="#">Оюунсанаа – Тусгай 2</a></li>
-              </ul>
-            </li>
-            <li class="has-submenu">
-              <a href="#">Багц</a>
-              <ul class="submenu">
-                <li><a href="#">Оюунсанаа – Гэр бүл</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Хөтөлбөр</a></li>
-        <li><a href="#">Үйлчилгээ</a></li>
-        <li><a href="#">Тест</a></li>
-        <li><a href="#">Сэтгэлийн боловсрол</a></li>
-        <li><a href="#">Видео/Хичээлүүд</a></li>
-        <li><a href="#">Өдрийн тэмдэглэл</a></li>
-        <li><a href="#">Миний булан</a></li>
-        <li><a href="#">Нууц цонх</a></li>
-      </ul>
-    </div>
-
-    <div id="chatbox" class="chatbox"></div>
-
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Бичих..." />
-      <button id="sendBtn">Илгээх</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>p
+<ul class="sidebar-menu">
+  <li><a href="#">Бүртгэл</a></li>
+  <li class="has-submenu">
+    <a href="#">Сэтгэлийн хөтөч</a>
+    <ul class="submenu">
+      <li><a href="chatbots_standard.html">Энгийн</a></li>
+      <li><a href="chatbots_premium.html">Премиум</a></li>
+      <li><a href="chatbots_special.html">Тусгай үйлчилгээ</a></li>
+      <li><a href="chatbots_packages.html">Багц</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Хөтөлбөр</a></li>
+  <li><a href="#">Үйлчилгээ</a></li>
+  <li><a href="#">Тест</a></li>
+  <li><a href="#">Сэтгэлийн боловсрол</a></li>
+  <li><a href="#">Видео/Хичээлүүд</a></li>
+  <li><a href="#">Өдрийн тэмдэглэл</a></li>
+  <li><a href="#">Миний булан</a></li>
+  <li><a href="#">Нууц цонх</a></li>
+</ul>
